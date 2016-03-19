@@ -8,6 +8,9 @@
     </head>
     <body>
         <h1>Listar Produtos</h1>
+        <c:if test="${erro!=null}">
+            <div style="background-color: pink;">${erro}</div>
+        </c:if>
         <ul>
             <c:forEach items="${produtos}" var="produto">
                 <li>${produto.nome} R$${produto.preco}</li>
